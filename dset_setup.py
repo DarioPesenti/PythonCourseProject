@@ -1,17 +1,17 @@
 import os
 import torch
 print(torch.__version__)
-from torch import nn
+from torch import nn # LP: unused import
 import torch.nn.functional as F
 import torchvision
-from torchvision import datasets, transforms
-from torch.utils.data import TensorDataset, DataLoader
+from torchvision import datasets, transforms # LP: unused import
+from torch.utils.data import TensorDataset, DataLoader # LP: unused import
 import matplotlib.pyplot as plt
-from sklearn.manifold import TSNE
-from sklearn.decomposition import PCA
-import pandas as pd
+from sklearn.manifold import TSNE  # LP: unused import
+from sklearn.decomposition import PCA  # LP: unused import
+import pandas as pd  # LP: unused import
 import numpy as np
-import random
+import random  # LP: unused import
 import h5py
 import joblib
 import argparse
@@ -29,13 +29,14 @@ def sample_random_batch_with_labels(batch_size):
         images: shape [batch_size, 64, 64, 3], values normalized to range [0, 1].
         labels: shape [batch_size, number_of_label_dimensions]
     """
+    # LP: I would recommend not to use variables out of scope for the function! maybe pass it as an argument?
     path =args.save_path
 
     dataset = h5py.File(path +'//3dshapes.h5', 'r')
 
     images = dataset['images']  # array shape [480000,64,64,3], uint8 in range(256)
     labels = dataset['labels']  # array shape [480000,6], float64
-    image_shape = images.shape[1:]  # [64,64,3]
+    image_shape = images.shape[1:]  # [64,64,3]  # LP: unused variable
     label_shape = labels.shape[1:]  # [6]
     n_samples = labels.shape[0]  # 10*10*10*8*4*15=480000   
     indices = np.random.choice(n_samples, batch_size)
@@ -62,7 +63,6 @@ def show_images_grid(imgs_, num_images=25):
       ax.set_yticks([])
     else:
       ax.axis('off')
-
 
 
 if __name__=="__main__":

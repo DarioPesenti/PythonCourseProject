@@ -3,8 +3,13 @@ import numpy as np
 import torch.nn.functional as F
 
 def measure_convexity(embeddings, labels, model, device, num_pairs=10, num_interpolated_points=10):
+    # LP: I would recommend at least some minimal documentation for the function,
+    # clarifying arguments and at least coarse description of the logic! 
+    # Is it something like "I walk from one point to another in the latent space, and count how consistent classifications I get"?
+
+
     model.eval()  # Ensuring the model is in evaluation mode
-    class_labels = range(10)  # Assuming 10 classes
+    class_labels = range(10)  # Assuming 10 classes  # LP: maybe this could have been an argument
     class_proportions = {}  # Dictionary to store proportions for each class
 
     if isinstance(embeddings, list):
@@ -44,6 +49,7 @@ def measure_convexity(embeddings, labels, model, device, num_pairs=10, num_inter
         proportion = class_counts*100 / (len(interpolation_interval)*num_pairs)
         class_proportions[class_label] = proportion
 
+    # LP: I would recommend return values from the function and print them outside, after you've done the function call.
     # Print the proportions for all classes after processing
     for class_label, proportion in class_proportions.items():
         print(f"Percentage of points correctly predicted as class {class_label}: {proportion}%")
