@@ -1,0 +1,18 @@
+{"time":"2024-09-16T11:19:12.14791+02:00","level":"INFO","msg":"using version","core version":"0.18.0"}
+{"time":"2024-09-16T11:19:12.147968+02:00","level":"INFO","msg":"created symlink","path":"/Users/vigji/Desktop/python-projects/python-cimec-dario-pesenti/wandb/run-20240916_111912-2kyc0wdz/logs/debug-core.log"}
+{"time":"2024-09-16T11:19:12.148232+02:00","level":"INFO","msg":"using version","core version":"0.18.0"}
+{"time":"2024-09-16T11:19:12.148248+02:00","level":"INFO","msg":"created symlink","path":"/Users/vigji/Desktop/python-projects/python-cimec-dario-pesenti/wandb/run-20240916_111912-2kyc0wdz/logs/debug-core.log"}
+{"time":"2024-09-16T11:19:12.171059+02:00","level":"INFO","msg":"created new stream","id":"2kyc0wdz"}
+{"time":"2024-09-16T11:19:12.171115+02:00","level":"INFO","msg":"stream: started","id":"2kyc0wdz"}
+{"time":"2024-09-16T11:19:12.171146+02:00","level":"INFO","msg":"sender: started","stream_id":{"value":"2kyc0wdz"}}
+{"time":"2024-09-16T11:19:12.171163+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"2kyc0wdz"}}
+{"time":"2024-09-16T11:19:12.171122+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"2kyc0wdz"}}
+{"time":"2024-09-16T11:19:12.480009+02:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-09-16T11:19:12.481136+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-09-16T11:19:26.486022+02:00","level":"INFO","msg":"stream: closing","id":"2kyc0wdz"}
+{"time":"2024-09-16T11:19:26.48607+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-09-16T11:19:26.486107+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-09-16T11:19:33.326559+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"2kyc0wdz"}}
+{"time":"2024-09-16T11:19:33.326573+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"2kyc0wdz"}}
+{"time":"2024-09-16T11:19:33.32667+02:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"2kyc0wdz"}}
+{"time":"2024-09-16T11:19:33.326902+02:00","level":"INFO","msg":"stream: closed","id":"2kyc0wdz"}

@@ -1,8 +1,8 @@
-import os
+import os  # LP: unused import
 import torch
 from torch import nn
 import torch.nn.functional as F
-import torchvision
+import torchvision  # LP: unused import
 
 
 device = torch.device("cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu")
@@ -37,6 +37,7 @@ model = MyNeuralNetwork().to(device)
 
 embedding_classifier = nn.Linear(16384, 10).to(device) #used for convexity analyses
 
+# LP: not clear why this is duplicated here
 device = torch.device("cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu")
 criterion = nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(list(model.parameters()) + list(embedding_classifier.parameters()), lr=0.001)

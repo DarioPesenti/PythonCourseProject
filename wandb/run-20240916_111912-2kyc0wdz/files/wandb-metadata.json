@@ -1,0 +1,40 @@
+{
+  "os":  "macOS-14.5-arm64-arm-64bit",
+  "python":  "3.10.0",
+  "startedAt":  "2024-09-16T09:19:12.146268Z",
+  "args":  [
+    "-w"
+  ],
+  "program":  "/Users/vigji/Desktop/python-projects/python-cimec-dario-pesenti/train.py",
+  "codePath":  "train.py",
+  "git":  {
+    "remote":  "https://github.com/vigji/python-cimec-dario-pesenti",
+    "commit":  "3d9a63676adf8af36db282284c6b11d4f01dfdda"
+  },
+  "email":  "luigi.petrucco@gmail.com",
+  "root":  "/Users/vigji/Desktop/python-projects/python-cimec-dario-pesenti",
+  "host":  "Luigis-MacBook-Pro-3.local",
+  "username":  "vigji",
+  "executable":  "/Users/vigji/miniconda3/envs/pytorch-env/bin/python",
+  "codePathLocal":  "train.py",
+  "cpu_count":  10,
+  "cpu_count_logical":  10,
+  "disk":  {
+    "/":  {
+      "total":  "994662584320",
+      "used":  "935970803712"
+    }
+  },
+  "memory":  {
+    "total":  "34359738368"
+  },
+  "cpu":  {
+    "count":  10,
+    "countLogical":  10
+  },
+  "gpuapple":  {
+    "gpuType":  "Apple M1 Pro",
+    "vendor":  "sppci_vendor_Apple",
+    "cores":  16
+  }
+}

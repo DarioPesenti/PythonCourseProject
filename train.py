@@ -2,7 +2,7 @@ import torch
 from torch import nn
 import torch.nn.functional as F
 import torchvision
-from torchvision import datasets, transforms
+from torchvision import datasets, transforms # LP: unused import
 from torch.utils.data import TensorDataset, DataLoader
 import numpy as np
 import random
@@ -60,7 +60,7 @@ def evaluate_model_get_embeddings(dataloader, model, criterion, embedding_classi
 
 
 def train_model(train_loader, test_loader, model,
-                embedding_classifier=nn.Linear(16384, 10).to(device),
+                embedding_classifier=nn.Linear(16384, 10).to(device),   # LP for complex default values, I would recommend to move them to the function body if kwarg is None
                 criterion=nn.CrossEntropyLoss(), 
                 optimizer= torch.optim.Adam(list(model.parameters()) + list(embedding_classifier.parameters()), lr=0.001), 
                 num_epochs=50):
@@ -154,11 +154,14 @@ if __name__=='__main__':
     torch.manual_seed(seed_value)
     np.random.seed(seed_value)
     random.seed(seed_value)
-    path= os.getcwd() + '//'
+    # LP: I would recomment Path objects
+    path= "/Users/vigji/Downloads/Convexity_project/"
     img_batch = np.load(path + 'img_batch.npy')
     label_batch = joblib.load(path + 'label_batch.pkl')
     train_loader, val_loader, test_loader= split_and_dataloader(img_batch, label_batch)
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+    # LP: Yet another device lookup line, maybe better to have this happening only once! EG, was giving me issues as I have mps device
+    device = "mps" # torch.device("cuda" if torch.cuda.is_available() else "cpu")
     #CUDA_VISIBLE_DEVICES=2 # remove if not necessary for your machine, la gente mi intasa i server clic
     if args.wandb:
         wandb.init(project='convexity')
